@@ -1,0 +1,324 @@
+[gd_scene load_steps=41 format=3 uid="uid://blfnv8c10aybc"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_evt3p"]
+[ext_resource type="Texture2D" uid="uid://ci2tionxaswaf" path="res://Art/Test/Title/ds_title_layer1.png" id="2_vv20r"]
+[ext_resource type="Texture2D" uid="uid://c5q0xxev7o3kh" path="res://Art/Test/Full/ds_full_dawn.png" id="3_3g107"]
+[ext_resource type="Texture2D" uid="uid://4fiumrb3mp4t" path="res://Art/Test/Title/ds_title_layer2.png" id="3_p6lxq"]
+[ext_resource type="Texture2D" uid="uid://bwh2jy645qhex" path="res://Art/Test/Title/ds_title_layer3.png" id="4_7y6p6"]
+[ext_resource type="Texture2D" uid="uid://cfp0ikls5m544" path="res://Art/Test/Full/ds_full_simon.png" id="4_rcq1q"]
+[ext_resource type="Texture2D" uid="uid://d1olxso5pfu8l" path="res://Art/Test/Full/ds_full_simonarm.png" id="5_cuseg"]
+[ext_resource type="Texture2D" uid="uid://cpbsjuco6nten" path="res://Art/Test/Full/ds_full_layer1.png" id="5_fk5t7"]
+[ext_resource type="Texture2D" uid="uid://cnj0nrpwvu1o5" path="res://Art/Test/Full/ds_full_bridgette.png" id="7_oxd6h"]
+[ext_resource type="Texture2D" uid="uid://bfnu63flunmoe" path="res://Art/Test/Full/ds_full_layer3.png" id="8_7s6w1"]
+[ext_resource type="Texture2D" uid="uid://c0t6hhsmkrs44" path="res://Art/Test/OverSimon/ds_oversimon_layer1.png" id="11_tkx3f"]
+[ext_resource type="Texture2D" uid="uid://bmcj7jh1yy8ut" path="res://Art/Test/OverSimon/ds_oversimon_layer2.png" id="12_2kg70"]
+[ext_resource type="Texture2D" uid="uid://caajverym7xsg" path="res://Art/Test/OverSimon/ds_oversimon_layer3.png" id="13_uw8a6"]
+[ext_resource type="Texture2D" uid="uid://rh756q3o3s1v" path="res://Art/Test/OverDawn/ds_overdawn_layer1.png" id="14_31equ"]
+[ext_resource type="Texture2D" uid="uid://d3s670cj7pqkd" path="res://Art/Test/OverDawn/ds_overdawn_layer2.png" id="15_1unvy"]
+[ext_resource type="Texture2D" uid="uid://dwq1y616mgbbk" path="res://Art/Test/OverDawn/ds_overdawn_layer3.png" id="16_3ioag"]
+[ext_resource type="Texture2D" uid="uid://cbfd7vxm2nqac" path="res://Art/Test/OverCoffee/ds_overcofee_layer1.png" id="17_fcq35"]
+[ext_resource type="Texture2D" uid="uid://b6cguql2uikgm" path="res://Art/Test/OverCoffee/ds_overcoffee_layer2.png" id="18_lok3u"]
+[ext_resource type="Texture2D" uid="uid://dm1i7twda6fhn" path="res://Art/Test/OverCoffee/ds_overcoffee_dawn.png" id="19_iksge"]
+[ext_resource type="Texture2D" uid="uid://bqc55rhn1bkoy" path="res://Art/Test/OverCoffee/ds_overcoffee_layer3.png" id="20_45mou"]
+[ext_resource type="Script" path="res://Scripts/PACLocationCam.gd" id="21_8ohef"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pihvb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fk5t7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5pd4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3g107")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k4ktr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rcq1q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mupmy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cuseg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3x0w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_oxd6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vguks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_7s6w1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rhbl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vv20r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a051n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p6lxq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oe2qa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7y6p6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rsx72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_tkx3f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c6jwa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_2kg70")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p7snl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_uw8a6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tm7bw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_31equ")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8lqge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_1unvy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uq4nj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_3ioag")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_etcr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_fcq35")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ne0ku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_lok3u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfq0p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_iksge")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bc03m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_45mou")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("title", "full", "osimon", "odawn", "ocoffee")]
+script = ExtResource("1_evt3p")
+title = NodePath("Title")
+full = NodePath("Full")
+osimon = NodePath("OverSimon")
+odawn = NodePath("OverDawn")
+ocoffee = NodePath("OverCoffee")
+
+[node name="Full" type="Node2D" parent="."]
+
+[node name="Layer1" type="AnimatedSprite2D" parent="Full"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_pihvb")
+
+[node name="Layer2" type="AnimatedSprite2D" parent="Full"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_5pd4p")
+
+[node name="Simon" type="AnimatedSprite2D" parent="Full/Layer2"]
+z_index = -1
+z_as_relative = false
+sprite_frames = SubResource("SpriteFrames_k4ktr")
+
+[node name="Arm" type="AnimatedSprite2D" parent="Full/Layer2/Simon"]
+z_as_relative = false
+sprite_frames = SubResource("SpriteFrames_mupmy")
+
+[node name="Bridgette" type="AnimatedSprite2D" parent="Full/Layer2"]
+sprite_frames = SubResource("SpriteFrames_r3x0w")
+
+[node name="Layer3" type="AnimatedSprite2D" parent="Full"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_vguks")
+
+[node name="Title" type="Node2D" parent="."]
+visible = false
+
+[node name="Layer1" type="AnimatedSprite2D" parent="Title"]
+sprite_frames = SubResource("SpriteFrames_6rhbl")
+
+[node name="Layer2" type="AnimatedSprite2D" parent="Title"]
+sprite_frames = SubResource("SpriteFrames_a051n")
+
+[node name="Layer3" type="AnimatedSprite2D" parent="Title"]
+sprite_frames = SubResource("SpriteFrames_oe2qa")
+
+[node name="OverSimon" type="Node2D" parent="."]
+visible = false
+
+[node name="Layer1" type="AnimatedSprite2D" parent="OverSimon"]
+sprite_frames = SubResource("SpriteFrames_rsx72")
+
+[node name="Layer2" type="AnimatedSprite2D" parent="OverSimon"]
+sprite_frames = SubResource("SpriteFrames_c6jwa")
+
+[node name="Layer3" type="AnimatedSprite2D" parent="OverSimon"]
+sprite_frames = SubResource("SpriteFrames_p7snl")
+
+[node name="OverDawn" type="Node2D" parent="."]
+visible = false
+
+[node name="Layer1" type="AnimatedSprite2D" parent="OverDawn"]
+sprite_frames = SubResource("SpriteFrames_tm7bw")
+
+[node name="Layer2" type="AnimatedSprite2D" parent="OverDawn"]
+sprite_frames = SubResource("SpriteFrames_8lqge")
+
+[node name="Layer3" type="AnimatedSprite2D" parent="OverDawn"]
+sprite_frames = SubResource("SpriteFrames_uq4nj")
+
+[node name="OverCoffee" type="Node2D" parent="."]
+visible = false
+
+[node name="Layer1" type="AnimatedSprite2D" parent="OverCoffee"]
+sprite_frames = SubResource("SpriteFrames_etcr7")
+
+[node name="Layer2" type="AnimatedSprite2D" parent="OverCoffee"]
+sprite_frames = SubResource("SpriteFrames_ne0ku")
+
+[node name="Dawn" type="AnimatedSprite2D" parent="OverCoffee/Layer2"]
+modulate = Color(1, 0.909804, 1, 0.607843)
+self_modulate = Color(1, 1, 1, 0)
+sprite_frames = SubResource("SpriteFrames_yfq0p")
+
+[node name="Layer3" type="AnimatedSprite2D" parent="OverCoffee"]
+sprite_frames = SubResource("SpriteFrames_bc03m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("21_8ohef")
+circleRadius = 11
+lerpFactor = 7
