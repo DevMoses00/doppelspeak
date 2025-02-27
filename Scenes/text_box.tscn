@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqwway263ic5e"]
 
 [ext_resource type="Script" path="res://Scripts/text_box.gd" id="1_blxos"]
-[ext_resource type="Texture2D" uid="uid://coj8mmyjs3mrp" path="res://Art/Test/Untitled_Artwork.png" id="2_co3bc"]
+[ext_resource type="Texture2D" uid="uid://dxjpeemj4ux1f" path="res://Art/Updated/text_box.png" id="2_nqyfp"]
 [ext_resource type="FontFile" uid="uid://c8ftvy6sc5p5p" path="res://Fonts/Oregano-Regular.ttf" id="3_etyl5"]
 
 [sub_resource type="FontVariation" id="FontVariation_uc35b"]
@@ -14,7 +14,7 @@ script = ExtResource("1_blxos")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2
-texture = ExtResource("2_co3bc")
+texture = ExtResource("2_nqyfp")
 region_rect = Rect2(27, 27, 450, 450)
 patch_margin_left = 54
 patch_margin_top = 72
@@ -31,6 +31,7 @@ theme_override_constants/margin_bottom = 50
 [node name="Label" type="Label" parent="MarginContainer"]
 texture_filter = 2
 layout_mode = 2
+size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_uc35b")
 theme_override_font_sizes/font_size = 30

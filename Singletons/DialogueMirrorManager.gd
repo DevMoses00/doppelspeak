@@ -1,14 +1,15 @@
 extends Node
 
 # for the JSON file
-var finish 
+var mirrorfinish 
 
-func readJSON(json_file_path):
+func mirrorreadJSON(json_file_path):
 	var file = FileAccess.open(json_file_path, FileAccess.READ)
 	var content = file.get_as_text()
 	var json = JSON.new()
-	finish = json.parse_string(content)
-	return finish
+	@warning_ignore("static_called_on_instance")
+	mirrorfinish = json.parse_string(content)
+	return mirrorfinish
 
 @onready var text_box_scene = preload("res://Scenes/text_box.tscn")
 
@@ -73,7 +74,7 @@ func dialogue_player(line_key):
 	# change the chapter variable to the line key title 
 	chapter = line_key
 	
-	dialogue_lines = finish[line_key]
+	dialogue_lines = mirrorfinish[line_key]
 	
 	# if this is a regular dialogue line
 	_show_text_box()
@@ -92,7 +93,6 @@ func _show_text_box():
 		current_line_index += 1
 		_show_text_box()
 		return
-	
 	if dialogue_lines[current_line_index].begins_with("Zoom"):
 		print("camera zoom")
 		# send a signal to tween the camera and zoom closer
@@ -128,7 +128,6 @@ func _show_text_box():
 		current_line_index += 1 
 		_show_text_box()
 		return
-	
 	if dialogue_lines[current_line_index].begins_with("Ocoffee"):
 		print("over coffee perspective")
 		# send a signal to change the visible layer
@@ -168,6 +167,7 @@ func _show_text_box():
 	
 	
 	text_box = text_box_scene.instantiate()
+	text_box.modulate.a = 0.4
 	text_box.finished_displaying.connect(_on_text_box_finished_displaying)
 	get_tree().root.add_child(text_box)
 	
@@ -178,23 +178,32 @@ func _show_text_box():
 		
 		#Full
 		if perspective == 1:
-			text_box.global_position = Vector2(150, -120)
-		
+			if character_path == "Simon":
+				text_box.global_position = Vector2(3000, -320)
+			if character_path == "Dawn":
+				text_box.global_position = Vector2(120, -320)
 		#Osimon
-		if perspective == 2: 
-			text_box.global_position = Vector2(-256, -250)
-		
+		if perspective == 2:
+			# Simon Chosen
+			if character_path == "Simon":
+				text_box.global_position = Vector2(3000,-350)
+			# Dawn Chosen
+			elif character_path == "Dawn":
+				text_box.global_position = Vector2(-210, -64)
 		#Odawn
 		if perspective == 3: 
-			text_box.global_position = Vector2(-320, 128)
+			if character_path == "Simon":
+				text_box.global_position = Vector2(3000,-350)
+			if character_path == "Dawn":
+				text_box.global_position = Vector2(50,-256)
 		
 		elif perspective == 4: 
-		#Ocoffee - Simon Perspective
+		# Simon Perspective
 			if character_path == "Simon":
-				text_box.global_position = Vector2(500,-300)
+				text_box.global_position = Vector2(2000,-350)
 		#Ocoffee - Dawn Perspective
 			elif character_path == "Dawn":
-				text_box.global_position = Vector2(680,460)
+				text_box.global_position = Vector2(-100,70)
 		
 		
 		dawn_talking.emit()
@@ -206,23 +215,31 @@ func _show_text_box():
 		
 		#Full
 		if perspective == 1:
-			text_box.global_position = Vector2(-150, -140)
-		
+			if character_path == "Simon":
+				text_box.global_position = Vector2(-100, -330)
+			elif character_path == "Dawn":
+				text_box.global_position = Vector2(3000, -330)
 		#Osimon
 		if perspective == 2:
-			text_box.global_position = Vector2(320, 128)
-		
+			if character_path == "Simon":
+				text_box.global_position = Vector2(-90, -256)
+			elif character_path == "Dawn":
+				text_box.global_position = Vector2(3000, -448)
+				
 		#Odawn
 		if perspective == 3: 
-			text_box.global_position = Vector2(128, -250)
+			if character_path == "Simon":
+				text_box.global_position = Vector2(150, -64)
+			if character_path == "Dawn":
+				text_box.global_position = Vector2(3000, -64)
 		
 		elif perspective == 4: 
 		#Ocoffee - Simon Perspective
 			if character_path == "Simon":
-				text_box.global_position = Vector2(-700,460)
+				text_box.global_position = Vector2(-100,100)
 		#Ocoffee - Dawn Perspective
 			elif character_path == "Dawn":
-				text_box.global_position = Vector2(-704,-320)
+				text_box.global_position = Vector2(3000,-350)
 		simon_talking.emit()
 		
 	elif dialogue_lines[current_line_index].begins_with("B:"):
@@ -234,15 +251,13 @@ func _show_text_box():
 			text_box.global_position = Vector2(200, 300)
 		#Ocoffee
 		elif perspective == 4: 
-			text_box.global_position = Vector2(500, 400)
-		
+			text_box.global_position = Vector2(2000, 400)
 		bridgette_talking.emit()
 	
 	text_box_tween = get_tree().create_tween().set_loops()
 	# tween animation
 	text_box_tween.tween_property(text_box, "scale",Vector2(1.01,1.01),2)
 	text_box_tween.tween_property(text_box, "scale",Vector2(.98,.98),2)
-	
 	text_box.display_text(dialogue_lines[current_line_index])
 	
 	can_advance_line = false
@@ -272,7 +287,9 @@ func _unhandled_input(event: InputEvent) -> void:
 				end_opening_over.emit()
 			elif chapter == "EndIntro":
 				choice_make.emit()
-			elif chapter == "Choice_Simon" or chapter == "Choice_Dawn":
+			elif chapter == "Choice_Simon":
+				choice_made.emit()
+			elif chapter == "Choice_Dawn":
 				choice_made.emit()
 			elif chapter == "CatchUp":
 				catchup_over.emit()

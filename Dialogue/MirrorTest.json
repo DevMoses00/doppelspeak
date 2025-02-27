@@ -1,5 +1,5 @@
 {
-
+    
 "Opening":[
 
     "B: I told her she's dumb for trying to talk to him this long.",
@@ -253,11 +253,11 @@
     
     "S: Too right, so who will it be?",
 
-    "Ocoffee:",
+    "Ocoffee",
 
     "D: Hmmmmm."
 ],
-
+    
 "Choice_Simon":[
 
     "S: Ah I'll just nab it, I could use a pick me up.",
@@ -265,14 +265,14 @@
     "D: Wonderful, that matter is taken care of."
 
 ],
-
+    
 "Choice_Dawn": [
 
     "D: I can take it. It is still warm.",
 
     "S: Good, right so."
 ],
-
+    
 "CatchUp":[
 
     "D: How was work this morning?",
@@ -409,7 +409,7 @@
 
     "D: I've looked up places online, and it would be really fun to go.",
 
-    "Ocoffee:",
+    "Ocoffee",
 
     "D: We could even just ride the subway and people watch?",
 
@@ -480,17 +480,15 @@
     "Time: 3:",
 
     "S: But the hell's that got to do with New York?"
-
 ],
-
 
 "MoveAway":[
 
-    "D: Don't be mad.",
+	"D: You're going to be mad.",
 
     "Time: 1",
 
-    "S: I won't be mad.",
+    "S: You're going to say something that'll make me mad?",
 
     "OSimon:",
         
@@ -628,7 +626,7 @@
 
     "Time: 1",
 
-    "D: Yeah, it is unexpected but exciting.",
+    "D: Deserve something 'like' this?",
 
     "Time: 3",
 
@@ -726,7 +724,7 @@
 
     "S: What do you mean by this? Are you unhappy?",
 
-    "D: No not unhappy. Maybe the word is uncertain?",
+    "D: Maybe unhappy, more so lost.",
         
     "D: But I think this moment is a good moment for me.",
 
@@ -850,7 +848,6 @@
 
 ],
 
-
 "BigHeat":[
 
     "S: You'd regret this if it doesn't pan out.",
@@ -883,7 +880,7 @@
 
     "S: Are you saying this isn't a joint decision?",
 
-    "D: I am not saying that.",
+    "D: Why should it be? You don't support what I want.",
         
     "D: I just want to go after this, Simon.",
 
@@ -987,7 +984,7 @@
 
     "Full",
 
-    "D: Simon, we are going to talk in circles about this.",
+    "D: Simon, you won't understand no matter how many times we talk about this.",
 
     "S: Right, I'm the stubborn one here.", 
 
@@ -1045,11 +1042,11 @@
 
     "S: If you think you can do this on your own, then what's stopping you?",
 
-    "S: Get up and go.",
+    "S: Don't leave.",
 
     "D: Simon, please. That's not what I want.",
 
-    "D: I don't want to leave you.",
+    "D: I don't want to hurt you.",
 
     "S: You're sure acting like it, Dawn.",
 
@@ -1121,19 +1118,18 @@
 
     "D: I'll message Serena.",
 
-    "D: And see if something else can be worked out.",
+    "D: And tell her I'll be there.",
 
-    "D: I will look for other things.",
+    "D: I will look for flights without you.",
 
-    "D: And see how it goes."
-
+    "D: And say goodbye to you."
 ],
 
 "Love":[
 
-    "D: You love me, right?",
+    "D: I wish you loved me enough to believe in me.",
 
-    "S: Yes, I do love you. That's why I'm telling you to get this out your head.",
+    "S: I love you so much. I can't imagine my life without you.",
 
     "S: I don't want to be a stickler. I want to see you successful.",
 
@@ -1141,7 +1137,7 @@
 
     "S: Do you love me?",
 
-    "D: I do love you, Simon. This is just tough.",
+    "D: I love you, but not enough to ignore my dreams for you anymore.",
 
     "S: You love me. I love you.",
     
@@ -1195,15 +1191,6 @@
 
     "S: We're talking about your Bridgette, yes..."
 
-],
-
-
-
-"Test": [
-    "D: This is Dawn speaking",
-
-    "S: This is Simon speaking",
-
-    "B: This is Bridgette speaking,"
 ]
+
 }

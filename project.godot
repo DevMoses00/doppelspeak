@@ -19,6 +19,8 @@ config/icon="res://Resources/VM Icon Sets.png"
 [autoload]
 
 DialogueManager="*res://Singletons/DialogueManager.gd"
+DialogueMirrorManager="*res://Singletons/DialogueMirrorManager.gd"
+SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
 
 [display]
 
@@ -28,6 +30,10 @@ window/size/mode=3
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://Resources/cursor.png"
 mouse_cursor/tooltip_position_offset=Vector2(2, 2)
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sound_manager/plugin.cfg")
 
 [input]
 
