@@ -1,4 +1,4 @@
-[gd_scene load_steps=893 format=3 uid="uid://blfnv8c10aybc"]
+[gd_scene load_steps=905 format=3 uid="uid://blfnv8c10aybc"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_evt3p"]
 [ext_resource type="Texture2D" uid="uid://dpd7pt8j6pf0b" path="res://Art/Updated/Full/Layer1/frame_01.png" id="2_wpyfl"]
@@ -847,6 +847,9 @@
 [ext_resource type="Texture2D" uid="uid://cuxtgxw8b8b7f" path="res://Art/Updated/OverCoffee/Simon/frame_28.png" id="810_mn0pr"]
 [ext_resource type="Texture2D" uid="uid://b6eskf7l3pt5k" path="res://Art/Updated/OverCoffee/Simon/frame_29.png" id="811_f2lyl"]
 [ext_resource type="Texture2D" uid="uid://qj6kxvyc6iao" path="res://Art/Updated/OverCoffee/Simon/frame_30.png" id="812_0gxrh"]
+[ext_resource type="StyleBox" path="res://buttonboxes/buttonhover.tres" id="848_ubdo7"]
+[ext_resource type="StyleBox" path="res://buttonboxes/buttonpressed.tres" id="849_endg2"]
+[ext_resource type="StyleBox" path="res://buttonboxes/button.tres" id="850_jtnyp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pihvb"]
 animations = [{
@@ -3605,6 +3608,25 @@ texture = ExtResource("23_ue5eo")
 [sub_resource type="FontVariation" id="FontVariation_6e0ly"]
 base_font = ExtResource("24_q3as5")
 
+[sub_resource type="FontVariation" id="FontVariation_fo4je"]
+base_font = ExtResource("24_q3as5")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_58kr4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ah73d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i8cqu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5iw47"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8h05"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_skkyd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40tup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sgr8"]
+
 [node name="Main" type="Node2D" node_paths=PackedStringArray("title", "full", "osimon", "odawn", "ocoffee", "bridgette_sprite", "full_simon_sprite", "full_dawn_sprite", "osimon_simon_sprite", "osimon_dawn_sprite", "odawn_simon_sprite", "odawn_dawn_sprite", "ocoffee_dawn", "ocoffee_simon")]
 script = ExtResource("1_evt3p")
 title = NodePath("Title")
@@ -3624,6 +3646,7 @@ ocoffee_dawn = NodePath("OverCoffee/Layer2/Dawn")
 ocoffee_simon = NodePath("OverCoffee/Layer2/Simon")
 
 [node name="Full" type="Node2D" parent="."]
+visible = false
 
 [node name="Layer1" type="AnimatedSprite2D" parent="Full"]
 z_index = -1
@@ -3634,11 +3657,13 @@ frame_progress = 0.906444
 [node name="Layer2" type="Node2D" parent="Full"]
 
 [node name="Dawn" type="AnimatedSprite2D" parent="Full/Layer2"]
+modulate = Color(1, 1, 1, 0)
 z_index = -1
 sprite_frames = SubResource("SpriteFrames_5pd4p")
 autoplay = "default"
 
 [node name="Simon" type="AnimatedSprite2D" parent="Full/Layer2"]
+modulate = Color(1, 1, 1, 0)
 z_index = -1
 z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_k4ktr")
@@ -3651,6 +3676,7 @@ autoplay = "default"
 frame_progress = 0.484145
 
 [node name="Bridgette" type="AnimatedSprite2D" parent="Full/Layer2"]
+modulate = Color(1, 1, 1, 0)
 z_index = -1
 sprite_frames = SubResource("SpriteFrames_r3x0w")
 autoplay = "default"
@@ -3666,7 +3692,7 @@ frame_progress = 0.454853
 texture = ExtResource("182_04vk5")
 
 [node name="Title" type="Node2D" parent="."]
-visible = false
+modulate = Color(1, 1, 1, 0)
 scale = Vector2(2, 2)
 
 [node name="Layer1" type="AnimatedSprite2D" parent="Title"]
@@ -3754,9 +3780,10 @@ autoplay = "default"
 frame_progress = 0.86852
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
 script = ExtResource("21_8ohef")
-circleRadius = 11
-lerpFactor = 7
+circleRadius = 47
+lerpFactor = 4
 
 [node name="SimonButton" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -3811,5 +3838,27 @@ theme_override_fonts/font = SubResource("FontVariation_6e0ly")
 theme_override_font_sizes/font_size = 141
 text = "Who Should Take the Coffee?"
 
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -258.0
+offset_top = 599.0
+offset_right = 293.82
+offset_bottom = 1003.23
+theme_override_fonts/font = SubResource("FontVariation_fo4je")
+theme_override_font_sizes/font_size = 271
+theme_override_styles/focus = SubResource("StyleBoxEmpty_58kr4")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ah73d")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_i8cqu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5iw47")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p8h05")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_skkyd")
+theme_override_styles/hover = ExtResource("848_ubdo7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_40tup")
+theme_override_styles/pressed = ExtResource("849_endg2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_6sgr8")
+theme_override_styles/normal = ExtResource("850_jtnyp")
+text = "Play"
+
 [connection signal="pressed" from="SimonButton" to="." method="_on_simon_button_pressed"]
 [connection signal="pressed" from="DawnButton" to="." method="_on_dawn_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -60,6 +60,7 @@ signal catchup_over
 signal moveaway_over
 signal dreams_over
 signal bigheat_over
+signal love_over
 
 var character_path : String
 
@@ -93,11 +94,12 @@ func _show_text_box():
 		current_line_index += 1
 		_show_text_box()
 		return
+		
 	if dialogue_lines[current_line_index].begins_with("Zoom"):
 		print("camera zoom")
 		# send a signal to tween the camera and zoom closer
 		camera_zoom_signaled.emit()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -106,7 +108,7 @@ func _show_text_box():
 		print("camera reset")
 		# send a signal to tween the camera and zoom closer
 		camera_reset_signaled.emit()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -115,7 +117,7 @@ func _show_text_box():
 		print("empty cup")
 		# send a signal to tween the camera and zoom closer
 		emptycup_signaled.emit()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -124,15 +126,17 @@ func _show_text_box():
 		print("engage end protocol")
 		# send a signal to tween the camera and zoom closer
 		endzoom_signaled.emit()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
+		
+	
 	if dialogue_lines[current_line_index].begins_with("Ocoffee"):
 		print("over coffee perspective")
 		# send a signal to change the visible layer
 		over_coffee_signaled.emit()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -141,7 +145,7 @@ func _show_text_box():
 		print("over Simon perspective")
 		# send a signal to change the visible layer
 		over_simon_signaled.emit()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -150,7 +154,7 @@ func _show_text_box():
 		print("over Dawn perspective")
 		# send a signal to change the visible layer
 		over_dawn_signaled.emit()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -159,12 +163,86 @@ func _show_text_box():
 		print("full view perspective")
 		# send a signal to change the visible layer
 		full_signaled.emit()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
 	
+	# Audio Commands
+	if dialogue_lines[current_line_index].begins_with("Stop"):
+		print("stop audio")
+		# Sound Manager stop 
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
 	
+	if dialogue_lines[current_line_index].begins_with("LagerB"):
+		print("play lager B")
+		# Sound Manager play lager B
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
+	
+	if dialogue_lines[current_line_index].begins_with("LagerD"):
+		print("play lager D")
+		# Sound Manager play lager D
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
+		
+	if dialogue_lines[current_line_index].begins_with("LagerG"):
+		print("play lager G")
+		# Sound Manager play lager G
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
+	
+	if dialogue_lines[current_line_index].begins_with("LagerE"):
+		print("play lager E")
+		# Sound Manager play lager E
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
+	if dialogue_lines[current_line_index].begins_with("CutJazz"):
+		print("play cut jazz")
+		# Sound Manager play cutjazz
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
+	if dialogue_lines[current_line_index].begins_with("Block"):
+		print("Block")
+		# Sound Manager play block
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
+	if dialogue_lines[current_line_index].begins_with("Endsong"):
+		print("play end song")
+		# Sound Manager play endsong
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
+	if dialogue_lines[current_line_index].begins_with("RestBGM"):
+		print("play Restaurant BGM")
+		# Sound Manager play restBG 
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
+	if dialogue_lines[current_line_index].begins_with("SadBack"):
+		print("play SadBack")
+		# Sound Manager play sadback
+		await get_tree().create_timer(0.2).timeout
+		current_line_index += 1 
+		_show_text_box()
+		return
 	
 	text_box = text_box_scene.instantiate()
 	text_box.modulate.a = 0.4
@@ -299,6 +377,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				dreams_over.emit()
 			elif chapter == "BigHeat":
 				bigheat_over.emit()
+			elif chapter == "Love":
+				love_over.emit()
 			return
 		
 		_show_text_box()

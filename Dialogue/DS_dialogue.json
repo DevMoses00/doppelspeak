@@ -16,15 +16,15 @@
 
     "B: Yesss, and leaving weird ass voicemails.",
 
-    "B: Saying stuff like, 'I don't know who you think you are.",
+    "B: Saying stuff like, 'I don't know who you think you are.'",
     
-    "B: And more importantly, I don't know who you think I am for you not to pick up the phone when I call you?'",
+    "B: 'And more importantly, I don't know who you think I am for you not to pick up the phone when I call you?'",
 
     "B: Like, what narcissistic sociopath talks like that?",
 
     "D: This guy, he sounds delusional.",
 
-    "B: Stacy didn't show up to seminar today because she worried she'd see him.",
+    "B: Stacy didn't show up to seminar today because she's worried she'd see him.",
 
     "D: They have the same class?",
 
@@ -38,7 +38,7 @@
 
     "S: Proper lunatic behavior.",
 
-    "S: I don't know who you think I am?",
+    "S: 'I don't know who you think I am?'",
 
     "S: Like honestly mate you're digging a hole you're never getting out from.",
 
@@ -88,13 +88,15 @@
 
     "D: Ich bin 'Pro Deutschsprachige Gemeinschaft'.",
 
-    "S: Haven't the slightest idea what she's on about, but everything else we know through and through about each other.",
+    "S: Well, haven't the slightest idea what she's on about there.",
+    
+    "S: But everything else we know through and through about each other.",
 
     "B: A millennial romance story right in front of me, imagine.",
 
-    "S: All I'm saying is, if haven't left an apeshit voicemail for you in the first three years.",
+    "S: All I'm saying is, if I haven't left an apeshit voicemail for you in the first three years.",
             
-    "S: Then I won't leave an apeshit voicemail for you in next 30.",
+    "S: Then I won't leave an apeshit voicemail for you in the next 30.",
 
     "D: Yes I agree with that, but whenever he calls and I cannot pick up, I don't hear from him the rest of the day.",
 
@@ -341,15 +343,13 @@
         
     "S: He'd come off it in an instant.",
 
-    "S: Plant his arse in a patch of grass and spend it watching the clouds or whatever.", 
+    "S: Plant his arse in a patch of grass and spend it watching the clouds or whatever he does.", 
 
     "D: That does sound pleasant actually. A break away from all the craziness.",
 
     "Time: 3", 
 
     "D: We should do something like that soon, right? A little vacation.",
-
-    "Time: 2",
 
     "S: A vacation, darling? With what money?",
 
@@ -469,6 +469,8 @@
 
     "S: Oh come off it. Just speak your mind darling.",
 
+    "Stop:",
+
     "D: Simon, I think it's time I find work.",
 
     "Full:",
@@ -504,11 +506,15 @@
 
     "S: You know it's impossible to start up a business.",
 
+    "Stop:",
+
     "S: Unless you do dodgy work, or know dodgy blokes.",
 
     "OSimon:",
 
     "D: Simon, do you really think that is the only way?",
+
+    "RestBGM",
 
     "D: There are so many art business I see online that look really successful.",
 
@@ -590,6 +596,8 @@
 
     "S: You've messaged her already?",
 
+    "Stop",
+
     "D: She liked them a lot, Simon.",
 
     "S: You didn't mention this one bit to me.",
@@ -613,6 +621,8 @@
     "S: I bloody am. This is the first I'm hearing of it. Are you sure she's real darling?",
 
     "D: She is very real, and she likes my work.",
+
+    "LagerB",
 
     "D: I understand that it is a surprise, but I work hard making my pieces.",
 
@@ -663,6 +673,8 @@
     "D: You sound mad now.",
 
     "S: I'm just trying to catch up with where you're at mentally.",
+
+    "LagerD",
 
     "S: Seeing that I've been left out of most of this conversation.",
 
@@ -722,7 +734,11 @@
 
     "D: Ever since graduation, my head has been spinning with what to do for my life.",
 
+    "Stop",
+
     "D: I was not expecting this to be it.",
+
+    "RestBGM",
 
     "S: What do you mean by this? Are you unhappy?",
 
@@ -768,6 +784,8 @@
 
     "D: And I resonated with that.",
 
+    "Stop",
+
     "D: I want to bet on myself, Simon.",
 
     "Ocoffee",
@@ -787,6 +805,8 @@
     "S: The negative is called real life, darling. It's our reality.",
 
     "S: Blokes go out everyday with a dream and are crushed by the weight of the real world.",
+
+    "LagerG",
 
     "S: Bridgette doesn't know, or frankly care about stuff like that.", 
 
@@ -809,6 +829,8 @@
     "S: Just not before.", 
 
     "D: They are not kid dreams, Simon.",
+
+    "LagerE",
 
     "D: This is what I want. What I want as an adult.",
 
@@ -844,6 +866,8 @@
 
     "D: For my dreams, Simon.", 
 
+    "LagerE",
+
     "S: You're dreams are downright expensive, Dawn.",
 
     "S: That's the problem."
@@ -877,11 +901,15 @@
 
     "D: If it does not work out, then that will be something I can deal with then.",
 
+    "LagerG",
+
     "S: Something you'll deal with?",
 
     "Time:2",
 
     "S: Are you saying this isn't a joint decision?",
+
+    "SadBack",
 
     "D: I am not saying that.",
         
@@ -894,6 +922,8 @@
     "Zoom:",
 
     "S: Keeping in mind you hid this from me.",
+
+    "LagerE",
 
     "S: Where were 'we' in your thinking?",
 
@@ -909,6 +939,8 @@
 
     "S: You don't know. What do you mean?",
 
+    "LagerB",
+
     "D: It's just I don't know, Simon.", 
 
     "D: This is my dream, and I want to feel supported by my boyfriend.",
@@ -920,6 +952,8 @@
     "D: That is not the same. Not the same at all.",
 
     "D: I think I support you a lot.",
+
+    "LagerE",
 
     "D: You were talking about going to grad school earlier this year.",
 
@@ -933,6 +967,8 @@
 
     "S: I consulted you on that whole thing though, that's the difference.",
 
+    "LagerD",
+
     "S: Not once did I hide my thought process with you.",
 
     "S: And it seems like I can't expect the same from you.",
@@ -943,11 +979,15 @@
 
     "S: You just got to be bloody honest and not tip toe around major life decisions.",
 
+    "LagerG",
+
     "S: Especially when the person you're tip-toeing around is providing all the money.",
 
     "OSimon:",
 
     "D: There it is. I was waiting for you to bring that up.",
+
+    "LagerB",
 
     "S: What, the fact that I provide for us?",
 
@@ -969,11 +1009,15 @@
 
     "S: Huh, so you feel stuck, is that it?", 
 
-    "S: I break my neck for us just to scrap by.", 
+    "LagerD",
+
+    "S: I break my neck for us just to scrape by.", 
 
     "S: Damon is trying to murder me with 50 hour work weeks.",
 
     "S: That's a risk right there if you're looking for risks.",
+
+    "LagerB",
 
     "S: But I'm doing it for us. The both of us.",
 
@@ -989,11 +1033,15 @@
 
     "D: Simon, we are going to talk in circles about this.",
 
+    "Stop:",
+
     "S: Right, I'm the stubborn one here.", 
 
     "ODawn:",
 
     "S: You're seriously trying to hop on a flight to New York without anything planned.", 
+
+    "RestBGM",
 
     "S: Throwing caution to the wind, and I'll have to pick up what's left of ya.",
 
@@ -1005,7 +1053,11 @@
 
     "S: The absolute cheek of you, Dawn.",
 
+    "Stop:",
+
     "S: Of course I'm obligated, I'm your bloody boyfriend.", 
+
+    "SadBack",
 
     "S: Three years I've taken care of us, and I've tried my hardest for crying out loud.",
 
@@ -1014,6 +1066,8 @@
     "Ocoffee",
 
     "S: You sound like you're breaking up with me, Christ.",
+
+    "Time: 2",
 
     "D: Simon, that is an unproductive thing to say.", 
 
@@ -1045,7 +1099,11 @@
 
     "S: If you think you can do this on your own, then what's stopping you?",
 
+    "LagerB",
+
     "S: Get up and go.",
+
+    "Stop:",
 
     "D: Simon, please. That's not what I want.",
 
@@ -1081,13 +1139,17 @@
 
     "S: I think I'd just gotten my answer.",
 
+    "Time:2",
+
     "D: Simon, no I'm just confused right now.",
+
+    "Stop:",
 
     "D: It's a painful thing to think about.",
 
     "S: I'd hate to put you through any more pain.", 
 
-    "S: If you won't get up and go, I'll save you trouble and leave myself.",
+    "S: If you won't get up and go, I'll save you the trouble and leave myself.",
 
     "Time:2",
 
@@ -1103,9 +1165,9 @@
 
     "D: I think I am in over my head with this.",
 
-    "Zoom:",
-
     "D: I am sorry for not talking about this with you.",
+
+    "RestBGM:",
 
     "D: That is not the right thing to do.",
 
@@ -1115,6 +1177,8 @@
 
     "S: I accept your apology, so.", 
 
+    "CutJazz",
+
     "S: What's the move then, darling?",
 
     "Ocoffee:",
@@ -1123,7 +1187,11 @@
 
     "D: And see if something else can be worked out.",
 
+    "Time:1",
+
     "D: I will look for other things.",
+
+    "Time:3",
 
     "D: And see how it goes."
 
@@ -1167,7 +1235,13 @@
 
     "D: Dawn and Simon, D and S.",
 
-    "D: Okay, Simon. That sounds nice.",
+    "Ocoffee",
+
+    "D: Okay, Simon. That sounds nice."
+
+],
+
+"End":[
 
     "Emptycup:",
 
@@ -1179,9 +1253,9 @@
 
     "D: Right yes, I still have to cook the risotto.",
 
-    "Endzoom:",
-
     "S: I can be an extra pair of hands if you need it.",
+
+    "Endsong:",
 
     "S: I'll 'yes chef' you for however long your heart desires.",
 
@@ -1189,9 +1263,11 @@
 
     "D: If she is in the mood to listen to you hammer, you mean?",
 
-    "S: Oh come off it, of course she'll be listen...",
+    "S: Oh come off it, of course she'll listen...",
 
     "D: Right, we are talking about our Bridgette?",
+
+    "Endzoom:",
 
     "S: We're talking about your Bridgette, yes..."
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu481fsnjprd3"
+path="res://.godot/imported/Jazz Vol2 Club Dizzy Intensity 1_E_major__bpm_94_[cut_4sec].mp3-b88c1d076caa11e4dfbbc1afbbb5e00d.mp3str"
+
+[deps]
+
+source_file="res://audio2/Jazz Vol2 Club Dizzy Intensity 1_E_major__bpm_94_[cut_4sec].mp3"
+dest_files=["res://.godot/imported/Jazz Vol2 Club Dizzy Intensity 1_E_major__bpm_94_[cut_4sec].mp3-b88c1d076caa11e4dfbbc1afbbb5e00d.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

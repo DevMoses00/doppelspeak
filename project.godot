@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="project-copies"
+config/name="doppelspeak"
+run/main_scene="res://Scenes/start.tscn"
 config/features=PackedStringArray("4.3")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://Resources/temp_boot.png"
