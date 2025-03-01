@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Coffee_Shot.png-709ea5678352d165be4c717d00d4e
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

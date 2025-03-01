@@ -61,6 +61,9 @@ signal dreams_over
 signal bigheat_over
 signal love_over
 
+# signal to allow the mirror to continue alongside the main
+signal mirror_proceed
+
 var character_path : String
 
 func _ready() -> void:
@@ -98,6 +101,7 @@ func _show_text_box():
 		print("camera zoom")
 		# send a signal to tween the camera and zoom closer
 		camera_zoom_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -107,6 +111,7 @@ func _show_text_box():
 		print("camera reset")
 		# send a signal to tween the camera and zoom closer
 		camera_reset_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -116,6 +121,7 @@ func _show_text_box():
 		print("empty cup")
 		# send a signal to tween the camera and zoom closer
 		emptycup_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -125,6 +131,7 @@ func _show_text_box():
 		print("engage end protocol")
 		# send a signal to tween the camera and zoom closer
 		endzoom_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -135,6 +142,7 @@ func _show_text_box():
 		print("over coffee perspective")
 		# send a signal to change the visible layer
 		over_coffee_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -144,6 +152,7 @@ func _show_text_box():
 		print("over Simon perspective")
 		# send a signal to change the visible layer
 		over_simon_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -153,6 +162,7 @@ func _show_text_box():
 		print("over Dawn perspective")
 		# send a signal to change the visible layer
 		over_dawn_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -162,6 +172,7 @@ func _show_text_box():
 		print("full view perspective")
 		# send a signal to change the visible layer
 		full_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -180,6 +191,7 @@ func _show_text_box():
 		if SoundManager.is_playing("Restaurant") == true:
 			SoundManager.fade_out("Restaurant",3.0)
 			SoundManager.fade_in_bgs("Block",3.0,0,-20)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -190,6 +202,7 @@ func _show_text_box():
 		# Sound Manager play lager B
 		SoundManager.fade_in_mfx("LagerB",2.0)
 		SoundManager.fade_out("LagerB",22.0)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -200,6 +213,7 @@ func _show_text_box():
 		# Sound Manager play lager D
 		SoundManager.fade_in_mfx("LagerD",2.0)
 		SoundManager.fade_out("LagerD",22.0)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -210,6 +224,7 @@ func _show_text_box():
 		# Sound Manager play lager G
 		SoundManager.fade_in_mfx("LagerG",2.0)
 		SoundManager.fade_out("LagerG",22.0)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -220,6 +235,7 @@ func _show_text_box():
 		# Sound Manager play lager E
 		SoundManager.fade_in_mfx("LagerE",2.0,0,-10)
 		SoundManager.fade_out("LagerE",22.0)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -236,6 +252,7 @@ func _show_text_box():
 		print("Block")
 		# Sound Manager play block
 		SoundManager.fade_in_bgm("Block",3.0,0,-40)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -244,6 +261,7 @@ func _show_text_box():
 		print("play end song")
 		# Sound Manager play endsong
 		SoundManager.fade_in_bgm("Main",10.0,0,-15)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -252,6 +270,7 @@ func _show_text_box():
 		print("play Restaurant BGM")
 		# Sound Manager play restBG 
 		SoundManager.fade_in_bgm("Restaurant",2.0,0,-25)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -260,6 +279,7 @@ func _show_text_box():
 		print("play SadBack")
 		# Sound Manager play sadback
 		SoundManager.fade_in_bgm("SadBack",5.0,0,-25)
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -346,7 +366,8 @@ func _show_text_box():
 	can_advance_line = false
 
 func _on_text_box_finished_displaying():
-	can_advance_line = true
+		can_advance_line = true
+		
 
 func _unhandled_input(event: InputEvent) -> void:
 	if (
@@ -354,10 +375,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		is_dialogue_active &&
 		can_advance_line
 	):
-		text_box_tween.kill() # kill the tween loop
-		text_box.queue_free()
+		if is_instance_valid(text_box):
+			text_box_tween.kill() # kill the tween loop
+			text_box.queue_free()      
 		# have their mouths stop moving
 		stop_talking.emit()
+		#let the mirror manager know it's time to move on
+		if DialogueMirrorManager.mirror_is_active == true:
+			mirror_proceed.emit()
 		
 		current_line_index += 1
 		if current_line_index >= dialogue_lines.size():

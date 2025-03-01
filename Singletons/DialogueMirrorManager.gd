@@ -2,12 +2,12 @@ extends Node
 
 # for the JSON file
 var mirrorfinish 
+var mirror_is_active:bool = false
 
 func mirrorreadJSON(json_file_path):
 	var file = FileAccess.open(json_file_path, FileAccess.READ)
 	var content = file.get_as_text()
 	var json = JSON.new()
-	@warning_ignore("static_called_on_instance")
 	mirrorfinish = json.parse_string(content)
 	return mirrorfinish
 
@@ -65,10 +65,13 @@ signal love_over
 var character_path : String
 
 func _ready() -> void:
-	pass
+	DialogueManager.mirror_proceed.connect(mirror_advance)
+
 
 # Create a new dialogue start function that takes a specific set of dialogue lines
 func dialogue_player(line_key):
+	#the first time the mirror is called, turn active to true
+	mirror_is_active = true
 	if is_dialogue_active:
 		return
 	
@@ -99,6 +102,7 @@ func _show_text_box():
 		print("camera zoom")
 		# send a signal to tween the camera and zoom closer
 		camera_zoom_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -108,6 +112,7 @@ func _show_text_box():
 		print("camera reset")
 		# send a signal to tween the camera and zoom closer
 		camera_reset_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -117,6 +122,7 @@ func _show_text_box():
 		print("empty cup")
 		# send a signal to tween the camera and zoom closer
 		emptycup_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -126,6 +132,7 @@ func _show_text_box():
 		print("engage end protocol")
 		# send a signal to tween the camera and zoom closer
 		endzoom_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -136,6 +143,7 @@ func _show_text_box():
 		print("over coffee perspective")
 		# send a signal to change the visible layer
 		over_coffee_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -145,6 +153,7 @@ func _show_text_box():
 		print("over Simon perspective")
 		# send a signal to change the visible layer
 		over_simon_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -154,6 +163,7 @@ func _show_text_box():
 		print("over Dawn perspective")
 		# send a signal to change the visible layer
 		over_dawn_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -163,6 +173,7 @@ func _show_text_box():
 		print("full view perspective")
 		# send a signal to change the visible layer
 		full_signaled.emit()
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -172,6 +183,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("Stop"):
 		print("stop audio")
 		# Sound Manager stop 
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -180,6 +192,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("LagerB"):
 		print("play lager B")
 		# Sound Manager play lager B
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -188,6 +201,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("LagerD"):
 		print("play lager D")
 		# Sound Manager play lager D
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -196,6 +210,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("LagerG"):
 		print("play lager G")
 		# Sound Manager play lager G
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -204,6 +219,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("LagerE"):
 		print("play lager E")
 		# Sound Manager play lager E
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -211,6 +227,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("CutJazz"):
 		print("play cut jazz")
 		# Sound Manager play cutjazz
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -218,6 +235,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("Block"):
 		print("Block")
 		# Sound Manager play block
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -225,6 +243,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("Endsong"):
 		print("play end song")
 		# Sound Manager play endsong
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -232,6 +251,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("RestBGM"):
 		print("play Restaurant BGM")
 		# Sound Manager play restBG 
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -239,6 +259,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("SadBack"):
 		print("play SadBack")
 		# Sound Manager play sadback
+		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
 		_show_text_box()
@@ -343,47 +364,45 @@ func _show_text_box():
 func _on_text_box_finished_displaying():
 	can_advance_line = true
 
-func _unhandled_input(event: InputEvent) -> void:
-	if (
-		event.is_action_pressed("advance_dialogue") &&
-		is_dialogue_active &&
-		can_advance_line
-	):
+func mirror_advance():
+	if is_instance_valid(text_box):
 		text_box_tween.kill() # kill the tween loop
-		text_box.queue_free()
-		# have their mouths stop moving
-		stop_talking.emit()
-		
-		current_line_index += 1
-		if current_line_index >= dialogue_lines.size():
-			is_dialogue_active = false
-			current_line_index = 0
-			# send a signal saying that this line is over and a new action must occur?
-			if chapter == "Opening":
-				opening_over.emit()
-			elif chapter =="EndOpening":
-				end_opening_over.emit()
-			elif chapter == "EndIntro":
-				choice_make.emit()
-			elif chapter == "Choice_Simon":
-				choice_made.emit()
-			elif chapter == "Choice_Dawn":
-				choice_made.emit()
-			elif chapter == "CatchUp":
-				catchup_over.emit()
-			elif chapter == "MoveAway":
-				moveaway_over.emit()
-			elif chapter == "Dreams":
-				dreams_over.emit()
-			elif chapter == "BigHeat":
-				bigheat_over.emit()
-			elif chapter == "Love":
-				love_over.emit()
-			return
-		
-		_show_text_box()
-
-
+		text_box.queue_free()   
+	# have their mouths stop moving
+	stop_talking.emit()
+	# go to the next line
+	current_line_index += 1
+	
+	if current_line_index >= dialogue_lines.size():
+		is_dialogue_active = false
+		current_line_index = 0
+		# send a signal saying that this line is over and a new action must occur?
+		if chapter == "Opening":
+			opening_over.emit()
+		elif chapter =="EndOpening":
+			end_opening_over.emit()
+		elif chapter == "EndIntro":
+			choice_make.emit()
+		elif chapter == "Choice_Simon":
+			choice_made.emit()
+		elif chapter == "Choice_Dawn":
+			choice_made.emit()
+		elif chapter == "CatchUp":
+			catchup_over.emit()
+		elif chapter == "MoveAway":
+			moveaway_over.emit()
+		elif chapter == "Dreams":
+			dreams_over.emit()
+		elif chapter == "BigHeat":
+			bigheat_over.emit()
+		elif chapter == "Love":
+			# when this one is over, set mirror is active to false
+			mirror_is_active = false
+			love_over.emit()
+		return
+	
+	_show_text_box()
+	
 func skip_dialogue():
 	current_line_index = int(dialogue_lines.size())
 	text_box.queue_free()

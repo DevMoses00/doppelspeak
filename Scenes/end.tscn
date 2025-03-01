@@ -153,9 +153,9 @@
 [ext_resource type="Texture2D" uid="uid://ba6s1x3u2k2lb" path="res://Art/Updated/Title/TitleLayer3/frame_75.png" id="150_0pakq"]
 [ext_resource type="FontFile" uid="uid://c8ftvy6sc5p5p" path="res://Fonts/Oregano-Regular.ttf" id="152_m0aks"]
 [ext_resource type="Texture2D" uid="uid://ciaagrsxb6mfs" path="res://Resources/Primary_Black cropped.png" id="153_mdusy"]
-[ext_resource type="StyleBox" path="res://buttonboxes/buttonhover.tres" id="154_o7ui2"]
-[ext_resource type="StyleBox" path="res://buttonboxes/buttonpressed.tres" id="155_sn874"]
-[ext_resource type="StyleBox" path="res://buttonboxes/button.tres" id="156_idpmg"]
+[ext_resource type="StyleBox" uid="uid://d2d5pnm4qygec" path="res://buttonboxes/buttonhover.tres" id="154_o7ui2"]
+[ext_resource type="StyleBox" uid="uid://cjl7ik0eq3juq" path="res://buttonboxes/buttonpressed.tres" id="155_sn874"]
+[ext_resource type="StyleBox" uid="uid://cnsvdgocpsn2e" path="res://buttonboxes/button.tres" id="156_idpmg"]
 [ext_resource type="Texture2D" uid="uid://6pxiro5w86jf" path="res://Art/Updated/Full/coffee.png" id="157_gye61"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5sd65"]

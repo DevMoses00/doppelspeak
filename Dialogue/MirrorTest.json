@@ -180,8 +180,6 @@
 
     "B: The only thing you can call big on you are your ears...",
 
-    "Time: 1",
-
     "B: ANYWHO! This was great.",
 
     "B: Bye Dawn my love. Kisses from me.",
@@ -347,8 +345,6 @@
 
     "D: This is my chance to tell you what I've been planning.",
 
-    "Time: 3", 
-
     "D: Just say yes to a vacation, Simon.",
 
     "S: Fucks a vacation gonna do when we can't afford anything?",
@@ -370,8 +366,6 @@
     "OSimon:",
 
     "D: I'm going to go to New York.",
-
-    "Time: 1",
 
     "S: She's joking.",
 
@@ -405,19 +399,13 @@
 
     "D: I would blend in really well with the New York crowd.",
 
-    "Time: 2",
-
     "D: I am going to do this, Simon. Please say yes.",
 
     "Ocoffee",
 
     "D: Anything you want, please.",
 
-    "Time: 3", 
-
     "D: You are going to say no, I know you too well.", 
-
-    "Time: 2", 
 
     "S: The answer is no.",
 
@@ -447,8 +435,6 @@
 
     "S: Be sharp, get a job, and save up for a trip.",
 
-    "Time: 4",
-
     "D: There's no going back from this.",
 
     "S: You're hiding something from me.",
@@ -465,8 +451,6 @@
 
     "S: The fuck's you hiding?",
 
-    "Time: 2",
-
     "S: Oh come off it and say it.",
 
     "Stop:",
@@ -479,16 +463,12 @@
 
     "S: Finally, I had hoped seeing me dying every day would push you to contribute.",
 
-    "Time: 3:",
-
     "S: But the hell's that got to do with New York?"
 ],
 
 "MoveAway":[
 
 	"D: You're going to be mad.",
-
-    "Time: 1",
 
     "S: You're going to say something that'll make me mad?",
 
@@ -528,8 +508,6 @@
 
     "S: It's as simple as that.",
 
-    "Time: 3",
-
     "S: God, what's your endgame?",
 
     "D: You are going to be more upset at this.",
@@ -548,8 +526,6 @@
 
     "D: The look on your face...",
 
-    "Time:1",
-
     "D: I am going to be a jeweler, Simon.",
 
     "S: This woman is in New York?",
@@ -561,8 +537,6 @@
     "ODawn:",
 
     "S: I don't trust this one fucking bit.",
-
-    "Time: 1", 
 
     "S: You're out your mind trying to see this rando in New York.",
 
@@ -586,11 +560,7 @@
 
     "S: You got a response for that, Dawn?",
 
-    "Time: 2",
-
     "D: I already sent her my work. I got the job.",
-
-    "Time: 3",
 
     "S: What the fuck?",
 
@@ -602,13 +572,9 @@
 
     "D: Why is it so hard with you?",
 
-    "Time: 1",
-
     "D: Why are you getting upset at good news.",
 
     "D: Can you for once be happy for me?",
-
-    "Time: 1",
 
     "S: You did this whole thing behind my back?",
 
@@ -634,11 +600,7 @@
 
     "S: You were plotting to leave me.",
 
-    "Time: 1",
-
     "D: Deserve something 'like' this?",
-
-    "Time: 3",
 
     "S: Why didn't you tell me?",
 
@@ -701,8 +663,6 @@
     "S: I make payments on everything, where's my thanks for all that?",
 
     "S: It's incomprehensible, you trying to pack up and leave.",
-
-    "Time: 2",
 
     "S: You'll be fine. You'll find a job here.",
 
@@ -790,8 +750,6 @@
 
     "S: Fucking Bridgette, of course she's behind this.",
 
-    "Time: 3",
-
     "S: She thinks she knows everything when she hasn't a proper clue.",
 
     "S: Her life will go to shit. That's as clear as day.",
@@ -811,8 +769,6 @@
     "S: The fact she's crashing at our place this entire semester is proof.",
 
     "S: She's a fucking wreck, and I'm trying to save you from doing the same thing.", 
-
-    "Time: 1",
 
     "S: Dawn, look.", 
 
@@ -894,15 +850,11 @@
 
     "S: We don't have the money to bail you out.",
 
-    "Time: 2",
-
     "D: I don't need you holding me back Simon.",
 
     "LagerG",
 
     "S: Have you bloody lost it?",
-
-    "Time:2",
 
     "S: You want to throw me off to the side here?",
 
@@ -931,8 +883,6 @@
     "Ocoffee",
 
     "D: I did not know if you would support me.",
-
-    "Time: 2",
 
     "S: What kind of answer is that? You don't know about our three-year relationship?",
 
@@ -1002,8 +952,6 @@
 
     "D: I do not want to be stuck here.",
 
-    "Time: 2",
-
     "S: Huh, so you feel stuck, is that it?", 
 
     "LagerD",
@@ -1046,8 +994,6 @@
 
     "D: I am not a child you need to pander to.",
 
-    "Time: 2",
-
     "S: The absolute cheek of you, Dawn.",
 
     "Stop:",
@@ -1063,8 +1009,6 @@
     "Ocoffee",
 
     "S: Are you breaking up with me?",
-
-    "Time: 2",
 
     "D: I was not planning on it before this.", 
 
@@ -1118,8 +1062,6 @@
 
     "S: Do you swear by it?",
 
-    "Time:2",
-
     "S: If you truly want to be with me, you'd stay.",
 
     "S: We can make your dreams happen together.",
@@ -1128,15 +1070,11 @@
 
     "S: Just give it some time. What's a little more time?",
 
-    "Time: 3",
-
     "S: Please Dawn.",
     
     "S: You can't give up on us.",
 
     "S: Please say you wouldn't give up on us.",
-
-    "Time:2",
 
     "D: Simon, I'm sorry.",
 
@@ -1148,13 +1086,9 @@
 
     "S: Say something, don't make me leave.",
 
-    "Time:2",
-
     "D: Simon, don't leave please.",
 
     "S: Oh thank Christ.",
-
-    "Time: 1",
 
     "D: Okay, I am sorry.",
 
@@ -1170,8 +1104,6 @@
 
     "D: You have been kind to me, for a long time.",
 
-    "Time:2",
-
     "S: So we're good?", 
 
     "CutJazz",
@@ -1184,11 +1116,7 @@
 
     "D: And tell her I'll be there.",
 
-    "Time:1",
-
     "D: I will look for flights without you.",
-
-    "Time:3",
 
     "D: And say goodbye to you."
 ],
@@ -1200,8 +1128,6 @@
     "S: I love you so much. I can't imagine my life without you.",
 
     "S: I care for you so much. I know you'll be successful.",
-
-    "Time:1",
 
     "S: Do you love me?",
 

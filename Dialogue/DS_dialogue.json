@@ -180,8 +180,6 @@
 
     "B: The only thing you can call big on you are your ears...",
 
-    "Time: 1",
-
     "B: ANYWHO! This was great.",
 
     "B: Bye Dawn my love. Kisses from me.",
@@ -347,8 +345,6 @@
 
     "D: That does sound pleasant actually. A break away from all the craziness.",
 
-    "Time: 3", 
-
     "D: We should do something like that soon, right? A little vacation.",
 
     "S: A vacation, darling? With what money?",
@@ -370,8 +366,6 @@
     "OSimon:",
 
     "D: Well, I was wondering how much you know about New York?",
-
-    "Time: 1",
 
     "S: New York, you're serious darling?",
 
@@ -405,19 +399,13 @@
 
     "D: But we would not be like those kinds of tourists. We could pretend we're natives, you know?",
 
-    "Time: 2",
-
     "D: I've looked up places online, and it would be really fun to go.",
 
     "Ocoffee:",
 
     "D: We could even just ride the subway and people watch?",
 
-    "Time: 3", 
-
     "D: Simon? What do you think?", 
-
-    "Time: 2", 
 
     "S: Look, darling.",
 
@@ -447,8 +435,6 @@
 
     "S: There's no time or funds for a willy nilly trip. Sorry darling.",
 
-    "Time: 4",
-
     "D: Yeah. Yeah okay.",
 
     "S: Dawn, what's that look for?",
@@ -465,8 +451,6 @@
 
     "S: What do you mean more than that?",
 
-    "Time: 2",
-
     "S: Oh come off it. Just speak your mind darling.",
 
     "Stop:",
@@ -479,8 +463,6 @@
 
     "S: By all means, I shouldn't be the one to stop you. We could use the extra funds of course.",
 
-    "Time: 3:",
-
     "S: But the hell's that got to do with New York?"
 
 ],
@@ -489,8 +471,6 @@
 "MoveAway":[
 
     "D: Don't be mad.",
-
-    "Time: 1",
 
     "S: I won't be mad.",
 
@@ -530,8 +510,6 @@
 
     "S: It's as simple as that.",
 
-    "Time: 3",
-
     "S: You're giving me a look again.",
 
     "D: I have more to tell you.",
@@ -550,8 +528,6 @@
 
     "D: So she's looking for, what is the word...",
 
-    "Time:1",
-
     "D: A jeweler! She is looking for a jeweler to make pieces that are only part of her collection.",
 
     "S: That all sounds dandy, so are you saying she's in New York?",
@@ -563,8 +539,6 @@
     "ODawn:",
 
     "S: Hey I'm all for people doing what they do, I'm just a proper skeptic when it comes to these things.",
-
-    "Time: 1", 
 
     "S: What I'm hearing is that you wanna go to NY and see this lady, what was her name again?",
 
@@ -588,11 +562,7 @@
 
     "S: Am I lying, Dawn?",
 
-    "Time: 2",
-
     "D: I sent her pictures of my work. The pieces I made in school.",
-
-    "Time: 3",
 
     "S: You've messaged her already?",
 
@@ -604,13 +574,9 @@
 
     "D: She called my designs, 'intricate and charming for the modern day individualist.'",
 
-    "Time: 1",
-
     "D: She asked if I wanted to come work for her.",
 
     "D: She offered me a job, to be a jeweler.",
-
-    "Time: 1",
 
     "S: She did? Really?",
 
@@ -636,11 +602,7 @@
 
     "S: I'm just taking it all in right now. A bit of a shock.",
 
-    "Time: 1",
-
     "D: Yeah, it is unexpected but exciting.",
-
-    "Time: 3",
 
     "S: Why didn't you tell me?",
 
@@ -703,8 +665,6 @@
     "S: Bills coming out the arse, and loans we'll carry to our grave.",
 
     "S: We don't have the time or money to risk something like this.",
-
-    "Time: 2",
 
     "S: I know you're gutted over this Dawn, I know how important this is to you.",
 
@@ -792,8 +752,6 @@
 
     "S: Oh is that what she said?",
 
-    "Time: 3",
-
     "S: Did Bridgette mention that when those bets fail.",
 
     "S: You're stuck scrambling for the rest of your life.",
@@ -813,8 +771,6 @@
     "S: The fact she's crashing at our place this entire semester is proof.",
 
     "S: Her big bets is costing us money, and it's not something we've asked for.", 
-
-    "Time: 1",
 
     "S: Dawn, look.", 
 
@@ -897,15 +853,11 @@
 
     "S: There's too many to recover from if it doesn't work out.",
 
-    "Time: 2",
-
     "D: If it does not work out, then that will be something I can deal with then.",
 
     "LagerG",
 
     "S: Something you'll deal with?",
-
-    "Time:2",
 
     "S: Are you saying this isn't a joint decision?",
 
@@ -923,8 +875,6 @@
 
     "S: Keeping in mind you hid this from me.",
 
-    "LagerE",
-
     "S: Where were 'we' in your thinking?",
 
     "S: Because this big of a change wouldn't just affect you, obviously.",
@@ -934,8 +884,6 @@
     "Ocoffee",
 
     "D: I don't know.",
-
-    "Time: 2",
 
     "S: You don't know. What do you mean?",
 
@@ -1005,8 +953,6 @@
 
     "D: I do not want to be stuck here.",
 
-    "Time: 2",
-
     "S: Huh, so you feel stuck, is that it?", 
 
     "LagerD",
@@ -1049,8 +995,6 @@
 
     "D: I'm not asking you to do that. You are not obligated to do anything.",
 
-    "Time: 2",
-
     "S: The absolute cheek of you, Dawn.",
 
     "Stop:",
@@ -1066,8 +1010,6 @@
     "Ocoffee",
 
     "S: You sound like you're breaking up with me, Christ.",
-
-    "Time: 2",
 
     "D: Simon, that is an unproductive thing to say.", 
 
@@ -1121,8 +1063,6 @@
 
     "S: Yeah, I'm sure that's right, so.",
 
-    "Time:2",
-
     "S: I'm not one to do ultimatums.",
 
     "S: It's not me or your dreams, I wouldn't do that to you.",
@@ -1131,15 +1071,11 @@
 
     "S: So choosing shouldn't be a thing outright here.",
 
-    "Time: 3",
-
     "S: Hm. Right, so.",
     
     "S: If I were someone who gave you ultimatums.",
 
     "S: I think I'd just gotten my answer.",
-
-    "Time:2",
 
     "D: Simon, no I'm just confused right now.",
 
@@ -1151,13 +1087,9 @@
 
     "S: If you won't get up and go, I'll save you the trouble and leave myself.",
 
-    "Time:2",
-
     "D: Simon, don't leave please.",
 
     "S: Any reason why I shouldn't?",
-
-    "Time: 1",
 
     "D: Okay, I am sorry.",
 
@@ -1173,8 +1105,6 @@
 
     "D: Especially when you are always so kind to me.",
 
-    "Time:2",
-
     "S: I accept your apology, so.", 
 
     "CutJazz",
@@ -1187,11 +1117,7 @@
 
     "D: And see if something else can be worked out.",
 
-    "Time:1",
-
     "D: I will look for other things.",
-
-    "Time:3",
 
     "D: And see how it goes."
 
@@ -1204,8 +1130,6 @@
     "S: Yes, I do love you. That's why I'm telling you to get this out your head.",
 
     "S: I don't want to be a stickler. I want to see you successful.",
-
-    "Time:1",
 
     "S: Do you love me?",
 
