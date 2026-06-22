@@ -8,9 +8,13 @@ const MAX_WIDTH = 500
 var text = ""
 var letter_index = 0
 
+@export var dawn : NinePatchRect
+@export var simon : NinePatchRect
+@export var bridgette : NinePatchRect
+
 # how many seconds will pass between each letter character displayed
-var letter_time = 0.02
-var space_time = 0.03
+var letter_time = 0.01
+var space_time = 0.02
 var punctuation_time = 0.01
 
 signal finished_displaying()
@@ -32,11 +36,21 @@ func display_text(text_to_display: String):
 		await resized
 	custom_minimum_size.x = min(size.x, MAX_WIDTH)
 	
+	# resizing all the other character text boxes
+	dawn.custom_minimum_size.x = min(size.x, MAX_WIDTH)
+	simon.custom_minimum_size.x = min(size.x, MAX_WIDTH)
+	bridgette.custom_minimum_size.x = min(size.x, MAX_WIDTH)
+	
 	if size.x > MAX_WIDTH:
 		label.autowrap_mode = TextServer.AUTOWRAP_WORD
 		await resized # wait for x resize
 		await resized # wait for y resize
 		custom_minimum_size.y = size.y
+	
+	# resizing all the other character text boxes
+		dawn.custom_minimum_size.y = size.y
+		simon.custom_minimum_size.y = size.y
+		bridgette.custom_minimum_size.y = size.y
 	
 	# POSITIONING - NOT SURE I NEED THIS
 	global_position.x -= (size.x / 2) 

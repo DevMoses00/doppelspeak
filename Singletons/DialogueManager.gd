@@ -189,8 +189,10 @@ func _show_text_box():
 		if SoundManager.is_playing("Block") == true:
 			SoundManager.fade_out("Block",3.0)
 		if SoundManager.is_playing("Restaurant") == true:
-			SoundManager.fade_out("Restaurant",3.0)
-			SoundManager.fade_in_bgs("Block",3.0,0,-20)
+			SoundManager.fade_out("Restaurant",5.0)
+			#SoundManager.fade_in_bgs("Block",3.0,0,-20)
+		if SoundManager.is_playing("JazzE") == true: 
+			SoundManager.fade_out("JazzE",3.0)
 		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
@@ -200,10 +202,11 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("LagerB"):
 		print("play lager B")
 		# Sound Manager play lager B
-		SoundManager.fade_in_mfx("LagerB",2.0)
+		SoundManager.play_mfx("LagerB")
+		await get_tree().create_timer(0.1).timeout
 		SoundManager.fade_out("LagerB",22.0)
 		can_advance_line = false
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.1).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -211,10 +214,11 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("LagerD"):
 		print("play lager D")
 		# Sound Manager play lager D
-		SoundManager.fade_in_mfx("LagerD",2.0)
+		SoundManager.play_mfx("LagerD")
+		await get_tree().create_timer(0.1).timeout
 		SoundManager.fade_out("LagerD",22.0)
 		can_advance_line = false
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.1).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -222,10 +226,11 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("LagerG"):
 		print("play lager G")
 		# Sound Manager play lager G
-		SoundManager.fade_in_mfx("LagerG",2.0)
+		SoundManager.play_mfx("LagerG")
+		await get_tree().create_timer(0.1).timeout
 		SoundManager.fade_out("LagerG",22.0)
 		can_advance_line = false
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.1).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -233,10 +238,11 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("LagerE"):
 		print("play lager E")
 		# Sound Manager play lager E
-		SoundManager.fade_in_mfx("LagerE",2.0,0,-10)
+		SoundManager.play_mfx("LagerE",0,-10)
+		await get_tree().create_timer(0.1).timeout
 		SoundManager.fade_out("LagerE",22.0)
 		can_advance_line = false
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.1).timeout
 		current_line_index += 1 
 		_show_text_box()
 		return
@@ -260,7 +266,7 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("Endsong"):
 		print("play end song")
 		# Sound Manager play endsong
-		SoundManager.fade_in_bgm("Main",10.0,0,-15)
+		SoundManager.fade_in_bgm("JazzE",10.0,0,-15)
 		can_advance_line = false
 		await get_tree().create_timer(0.2).timeout
 		current_line_index += 1 
@@ -292,11 +298,14 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("D:"):
 		# Play a Dawn sound
 		SoundManager.play_sfx("Dawn")
+		
+		#change the textbox color
+		text_box.dawn.visible = true 
 		# change position depending on what a name of a variable is
 		
 		#Full
 		if perspective == 1:
-			text_box.global_position = Vector2(150, -120)
+			text_box.global_position = Vector2(140, -120)
 		
 		#Osimon
 		if perspective == 2: 
@@ -320,11 +329,15 @@ func _show_text_box():
 	elif dialogue_lines[current_line_index].begins_with("S:"):
 		# Play a Simon sound
 		SoundManager.play_sfx("Simon")
+		
+			#change the textbox color
+		text_box.simon.visible = true 
+		
 		# change position depending on what a name of a variable is
 		
 		#Full
 		if perspective == 1:
-			text_box.global_position = Vector2(-150, -140)
+			text_box.global_position = Vector2(-100, -90)
 		
 		#Osimon
 		if perspective == 2:
@@ -346,6 +359,10 @@ func _show_text_box():
 	elif dialogue_lines[current_line_index].begins_with("B:"):
 		# Play a Bridgette sound
 		SoundManager.play_sfx("Bridgette")
+		
+			#change the textbox color
+		text_box.bridgette.visible = true 
+		
 		# change position depending on what a name of a variable is
 		#Full
 		if perspective == 1:

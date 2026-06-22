@@ -273,6 +273,9 @@ func _show_text_box():
 	if dialogue_lines[current_line_index].begins_with("D:"):
 		# Play a Dawn sound
 		
+		# show right dialogue box
+		text_box.dawn.visible = true 
+		
 		# change position depending on what a name of a variable is
 		
 		#Full
@@ -309,7 +312,8 @@ func _show_text_box():
 	
 	elif dialogue_lines[current_line_index].begins_with("S:"):
 		# Play a Simon sound
-
+		#change the textbox color
+		text_box.simon.visible = true 
 		# change position depending on what a name of a variable is
 		
 		#Full
@@ -343,7 +347,8 @@ func _show_text_box():
 		
 	elif dialogue_lines[current_line_index].begins_with("B:"):
 		# Play a Bridgette sound
-		
+		#change the textbox color
+		text_box.bridgette.visible = true 
 		# change position depending on what a name of a variable is
 		#Full
 		if perspective == 1:

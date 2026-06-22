@@ -1,20 +1,60 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqwway263ic5e"]
+[gd_scene load_steps=7 format=3 uid="uid://dqwway263ic5e"]
 
-[ext_resource type="Script" path="res://Scripts/text_box.gd" id="1_blxos"]
-[ext_resource type="Texture2D" uid="uid://dxjpeemj4ux1f" path="res://Art/Updated/text_box.png" id="2_nqyfp"]
+[ext_resource type="Script" uid="uid://b14hxt6l1thua" path="res://Scripts/text_box.gd" id="1_blxos"]
+[ext_resource type="Texture2D" uid="uid://dos6pbtxn73qj" path="res://Art/Updated/tbs/dawn_tb.png" id="3_1q4u4"]
 [ext_resource type="FontFile" uid="uid://c8ftvy6sc5p5p" path="res://Fonts/Oregano-Regular.ttf" id="3_etyl5"]
+[ext_resource type="Texture2D" uid="uid://c24w3tmjskccv" path="res://Art/Updated/tbs/simon_tb.png" id="4_2l2j4"]
+[ext_resource type="Texture2D" uid="uid://du04mwvqyskv3" path="res://Art/Updated/tbs/bridgett_tb.png" id="5_wvcnp"]
 
 [sub_resource type="FontVariation" id="FontVariation_uc35b"]
 base_font = ExtResource("3_etyl5")
 
-[node name="TextBox" type="MarginContainer"]
+[node name="TextBox" type="MarginContainer" node_paths=PackedStringArray("dawn", "simon", "bridgette")]
 offset_right = 192.0
 offset_bottom = 144.0
 script = ExtResource("1_blxos")
+dawn = NodePath("NinePatchRect/Dawn")
+simon = NodePath("NinePatchRect/Simon")
+bridgette = NodePath("NinePatchRect/Bridgette")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2
-texture = ExtResource("2_nqyfp")
+region_rect = Rect2(27, 27, 450, 450)
+patch_margin_left = 54
+patch_margin_top = 72
+patch_margin_right = 63
+patch_margin_bottom = 63
+
+[node name="Dawn" type="NinePatchRect" parent="NinePatchRect"]
+visible = false
+layout_mode = 2
+offset_right = 192.0
+offset_bottom = 144.0
+texture = ExtResource("3_1q4u4")
+region_rect = Rect2(27, 27, 450, 450)
+patch_margin_left = 54
+patch_margin_top = 72
+patch_margin_right = 63
+patch_margin_bottom = 63
+
+[node name="Simon" type="NinePatchRect" parent="NinePatchRect"]
+visible = false
+layout_mode = 2
+offset_right = 192.0
+offset_bottom = 144.0
+texture = ExtResource("4_2l2j4")
+region_rect = Rect2(27, 27, 450, 450)
+patch_margin_left = 54
+patch_margin_top = 72
+patch_margin_right = 63
+patch_margin_bottom = 63
+
+[node name="Bridgette" type="NinePatchRect" parent="NinePatchRect"]
+visible = false
+layout_mode = 2
+offset_right = 192.0
+offset_bottom = 144.0
+texture = ExtResource("5_wvcnp")
 region_rect = Rect2(27, 27, 450, 450)
 patch_margin_left = 54
 patch_margin_top = 72
@@ -34,7 +74,7 @@ layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_uc35b")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 32
 vertical_alignment = 1
 
 [node name="LetterDisplayTimer" type="Timer" parent="."]
